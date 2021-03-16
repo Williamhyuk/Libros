@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase CRUD</title>
+
+  <!-- BOOTSWATCH -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/pulse/bootstrap.min.css">
+
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+</head>
+
+<body class="bg-light">
+
+  <!-- ADD TASK -->
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+
+            <h1 class="h4" style="text-align: center;">PUBLICA TU LIBRO</h1>
+
+            <form id="task-form">
+                <div class="form-group">
+                    <input type="text" id="task-title" class="form-control" class="Task Title" placeholder="Título"
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <textarea id="task-description" rows="3" class="form-control" placeholder="Descripción"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="task-price" class="form-control" class="Task Price" placeholder="Precio"
+                    autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="task-cant" class="form-control" class="Task Cant" placeholder="Número de unidades"
+                    autofocus>
+                </div>
+                <!-- 
+                <div>
+                    <h6>Elige hasta 5 categorías:</h6>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="tecnologia">
+                    <label class="form-check-label" for="flexCheckChecked">Tecnología</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="emprendimiento">
+                    <label class="form-check-label" for="flexCheckChecked">Emprendimiento</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="politica">
+                    <label class="form-check-label" for="flexCheckChecked">Política</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="economia">
+                    <label class="form-check-label" for="flexCheckChecked">Economía</label>
+                </div>
+                -->
+                <div>
+                    <h6>   </h6>
+                </div>
+                <div>
+                    <h6>Sube hasta 10 imágenes:</h6>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02">
+                    <label class="input-group-text" for="inputGroupFile02">Subir imágenes</label>
+                </div>
+                  
+
+              <button class="btn btn-primary" id="btn-task-form">
+                Publicar
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Tasks List -->
+      <div class="col-md-6" id="tasks-container"></div>
+    </div>
+  </div>
+
+  <!-- FIREBASE -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBl-bF5Uu8o3JYMnVgnAGoSlRozx-gqbP4",
+      authDomain: "libreria-libre-d2aa5.firebaseapp.com",
+      projectId: "libreria-libre-d2aa5",
+      storageBucket: "libreria-libre-d2aa5.appspot.com",
+      messagingSenderId: "463063642471",
+      appId: "1:463063642471:web:d72c1041fe311c46377fc2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- CUSTOM CODE -->
+  <script src="it_venta.js"></script>
+</body>
+
+</html>
+
